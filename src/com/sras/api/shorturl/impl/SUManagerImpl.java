@@ -54,7 +54,7 @@ public class SUManagerImpl implements SUManager {
 	    urlData.setCreated(ud.getCreated());
 	    urlData.setUpdated(ud.getUpdated());
 	    urlData.setPrivacy(ud.isPrivacy());
-	    shortUrls.add(urlData);
+	    shortUrls.add(urlData); 
 	}
 	return shortUrls;
     }
