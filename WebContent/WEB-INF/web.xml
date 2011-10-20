@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_9" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+    <display-name>Struts Blank</display-name>
+
+    <filter>
+        <filter-name>struts2</filter-name>
+        <filter-class>com.sras.client.ControllerFilter</filter-class>
+		<init-param>
+			<param-name>DataSource.url</param-name>
+			<param-value>jdbc:mysql://127.0.0.1:3306/encrypturls?autoReconnect=true</param-value>
+		</init-param>        
+		<init-param>
+			<param-name>DataSource.driverName</param-name>
+			<param-value>com.mysql.jdbc.Driver</param-value>
+		</init-param>        
+		<init-param>
+			<param-name>DataSource.host</param-name>
+			<param-value>127.0.0.1</param-value>
+		</init-param>        
+		<init-param>
+			<param-name>DataSource.port</param-name>
+			<param-value>3306</param-value>
+		</init-param>        
+		<init-param>
+			<param-name>DataSource.instance</param-name>
+			<param-value>encrypturls</param-value>
+		</init-param>        
+		<init-param>
+			<param-name>DataSource.user</param-name>
+			<param-value>root</param-value>
+		</init-param>        
+		<init-param>
+			<param-name>DataSource.password</param-name>
+			<param-value>password</param-value>
+		</init-param>        
+    </filter>
+
+    <filter-mapping>
+        <filter-name>struts2</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
